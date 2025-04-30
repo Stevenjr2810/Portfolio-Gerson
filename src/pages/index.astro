@@ -8,8 +8,7 @@ import GmailIcon from "../components/icons/gmail.astro";
 import ProjectSetcion from "../components/projectSetcion.astro";
 import SkillsSection from "../components/SkillsSection.astro";
 import CertificadoSection from "../components/CertificadoSection.astro";
-import ContacForm from "../components/ContacForm.astro"
-
+import ContacForm from "../components/ContacForm.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -19,94 +18,89 @@ import ContacForm from "../components/ContacForm.astro"
 	<main>
 		<!-- Sección de bienvenida -->
 
-		<section id="home"
-			class="w-full mx-auto lg:w-[900px] py-20 md:py-28 flex items-center gap-6"
-		>
-			<div>
-				<img
-					class="rounded-full w-20 h-20 mb-4 shadow-lg"
-					src="Perfil.jpg"
-					alt="photo dev"
-				/>
-				<h1
-					class="text-white text-4xl font-bold flex items-center gap-x-2 pb-6"
-				>
-					Hey, soy Gerson
-					<a
-						class="flex items-center"
-						href="https://www.linkedin.com/in/gerson-lopez-solis/"
-						target="_blank"
-					>
-						<Badge>Disponible para trabajar</Badge>
-					</a>
-				</h1>
-				<h2 class="text-base md:text-lg opacity-80 leading-relaxed">
-					Desarrollador web colombiano, apasionado por crear
-					experiencias digitales <span class="text-yellow-400"
-						>interactivas</span
-					>, <span class="text-yellow-400">funcionales</span> y con enfoque
-					visual. Combino <span class="text-yellow-400"
-						>creatividad</span
-					> y <span class="text-yellow-400">técnica</span> para resolver
-					problemas reales con soluciones efectivas. Me defino como una
-					persona <span class="text-yellow-400">responsable</span>,
-					curiosa y comprometida con seguir creciendo en cada
-					proyecto.
-				</h2>
-				<div
-					class="flex flex-wrap items-center justify-center gap-4 mt-10"
-				>
-					<img
-						src="Memoji.png"
-						alt="Imagen de Gerson"
-						class="w-32 h-32 object-cover rounded-full shadow-lg"
-					/>
+		<section
+  id="home"
+  class="w-full mx-auto lg:w-[900px] px-4 py-16 md:py-24 flex flex-col gap-10"
+>
+  <!-- Foto de perfil superior -->
+  <img
+    class="rounded-full w-20 h-20 mb-4 shadow-lg"
+    src="Perfil.jpg"
+    alt="photo dev"
+/>
 
-					<nav class="flex flex-wrap gap-3">
-						<Socialpill
-							href="https://www.linkedin.com/in/gerson-lopez-solis/"
-						>
-							<LinkedInIcon class="size-5" />
-							LinkedIn
-						</Socialpill>
+  <!-- Título y descripción -->
+  <div>
+    <h1 class="text-white text-3xl md:text-4xl font-bold flex items-center gap-x-2 pb-6">
+      Hey, soy Gerson
+      <Badge link="https://www.linkedin.com/in/gerson-lopez-solis/">
+		Disponible para trabajar
+	  </Badge>
+	  
+    </h1>
 
-						<Socialpill href="https://github.com/Stevenjr2810">
-							<GitHubIcon class="size-5" />
-							GitHub
-						</Socialpill>
+    <h2 class="text-base md:text-lg opacity-80 leading-relaxed">
+      Desarrollador web colombiano, apasionado por crear experiencias digitales
+      <span class="text-yellow-400">interactivas</span>,
+      <span class="text-yellow-400">funcionales</span> y con enfoque visual.
+      Combino <span class="text-yellow-400">creatividad</span> y
+      <span class="text-yellow-400">técnica</span> para resolver problemas reales
+      con soluciones efectivas. Me defino como una persona
+      <span class="text-yellow-400">responsable</span>, curiosa y comprometida
+      con seguir creciendo en cada proyecto.
+    </h2>
+  </div>
 
-						<Socialpill>
-							<GmailIcon class="size-5" />
-							geresloso2000@gmail.com
-						</Socialpill>
-					</nav>
-				</div>
-			</div>
+  <!-- Imagen + redes en horizontal (desktop) o vertical (mobile) -->
+  <div class="flex flex-col md:flex-row items-center gap-6 mt-8">
+    <img
+      src="Memoji.png"
+      alt="Imagen de Gerson"
+      class="w-32 h-32 object-cover rounded-full shadow-lg"
+    />
+
+    <nav class="flex flex-wrap justify-center md:justify-start gap-3">
+      <Socialpill href="https://www.linkedin.com/in/gerson-lopez-solis/">
+        <LinkedInIcon class="size-5" />
+        LinkedIn
+      </Socialpill>
+
+      <Socialpill href="https://github.com/Stevenjr2810">
+        <GitHubIcon class="size-5" />
+        GitHub
+      </Socialpill>
+
+      <Socialpill href="mailto:geresloso2000@gmail.com">
+        <GmailIcon class="size-5" />
+        geresloso2000@gmail.com
+      </Socialpill>
+    </nav>
+  </div>
+</section>
+
+
+		<!-- Sección de proyectos -->
+
+		<section id="projects" class="w-full mx-auto lg:w-[900px]">
+			<ProjectSetcion />
 		</section>
 
-		 <!-- Sección de proyectos -->
+		<!-- Sección de Skills -->
 
-		<section id="projects" class="w-full mx-auto lg:w-[900px]" >
-			<ProjectSetcion />
-		  </section>
-
-		  <!-- Sección de Skills -->
-
-		<section id="skills" class="w-full mx-auto lg:w-[900px]" >
+		<section id="skills" class="w-full mx-auto lg:w-[900px]">
 			<SkillsSection />
-		  </section>
+		</section>
 
-		  <!-- Sección de Certificaciones -->
+		<!-- Sección de Certificaciones -->
 
-		<section id="certificate" class="w-full mx-auto lg:w-[900px]" >
+		<section id="certificate" class="w-full mx-auto lg:w-[900px]">
 			<CertificadoSection />
-		  </section>
+		</section>
 
-		  <!-- Sección de Contacto -->
+		<!-- Sección de Contacto -->
 
-		<section id="contact" class="w-full mx-auto lg:w-[900px]" >
-			<ContacForm/>
-		  </section>
-
+		<section id="contact" class="w-full mx-auto lg:w-[900px]">
+			<ContacForm />
+		</section>
 	</main>
 </Layout>
