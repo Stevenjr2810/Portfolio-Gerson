@@ -1,0 +1,35 @@
+---
+import astroIcon from "../components/icons/iconastro.astro"
+import JavScripIcon from "../components/icons/javaScript.astro"
+import JavaIcon from "../components/icons/java.astro"
+import netxIcon from "../components/icons/next.astro"
+import tailwindIcon from "../components/icons/tailwind.astro"
+import HtmlIcon from "../components/icons/html.astro"
+import nodeIcon from "../components/icons/node.astro"
+import pythonIcon from "../components/icons/python.astro"
+import reactIcon from "../components/icons/react.astro"
+import mongoIcon from "../components/icons/mongo.astro"
+import SkillItem from "../components/SkillItem.astro"
+import SkillIcon from "../components/icons/skills.astro"
+
+---
+
+<section class="py-20 px-4 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-2">
+        <SkillIcon class="w-6 h-6 text-white" />
+        Skills
+      </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <SkillItem name="JavaScript" icon={JavScripIcon} level={80} />
+    <SkillItem name="Tailwind" icon={tailwindIcon} level={80} />
+    <SkillItem name="HTML" icon={HtmlIcon} level={95} />
+    <SkillItem name="Astro" icon={astroIcon} level={70} />
+    <SkillItem name="MongoDB" icon={mongoIcon} level={50} />
+    <SkillItem name="Python" icon={pythonIcon} level={80} />
+    <SkillItem name="React" icon={reactIcon} level={70} />
+    <SkillItem name="NextJS" icon={netxIcon} level={60} />
+    <SkillItem name="Node" icon={nodeIcon} level={70} />
+    <SkillItem name="Java" icon={JavaIcon} level={40} />
+  </div>
+</section>
+

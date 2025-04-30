@@ -1,0 +1,22 @@
+---
+const { name, icon: Icon, level } = Astro.props;
+---
+
+<div class="flex items-center gap-4 w-full">
+  <!-- Icono + nombre -->
+  <div class="flex items-center gap-2 min-w-[120px]">
+    <Icon class="w-5 h-5 text-white" />
+    <span class="text-white font-medium">{name}</span>
+  </div>
+
+  <!-- Barra de progreso -->
+  <div class="w-full">
+    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+      <div
+        class="bg-white h-2.5 rounded-full transition-all duration-500"
+        style={`width: ${level}%`}
+      ></div>
+    </div>
+  </div>
+  
+</div>

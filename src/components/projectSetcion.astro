@@ -1,34 +1,43 @@
 ---
+import astroIcon from "../components/icons/iconastro.astro"
+import JavScripIcon from "../components/icons/javaScript.astro"
+import JavaIcon from "../components/icons/java.astro"
+import netxIcon from "../components/icons/next.astro"
+import tailwindIcon from "../components/icons/tailwind.astro"
 import ProjectCard from "../components/projectCards.astro";
 import CodeIcon from "../components/icons/code.astro";
 ---
 
 <section class="py-20 px-4 max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-2">
-        <CodeIcon class="w-6 h-6 text-white" />
-        Proyectos
+      <CodeIcon class="w-6 h-6 text-white" />
+      Proyectos
     </h2>
-
-    <div class="flex flex-col gap-10">
-        <ProjectCard
-            title="DocTic"
-            description="Aplicación web que permite buscar, subir y editar documentos académicos, facilitando la organización de contenidos educativos mediante una base de datos y funcionalidades CRUD."
-            image="DocTIC.png"
-            link="https://github.com/paulomeister/AplicacionIngSoftFinal"
-        />
-
-        <ProjectCard
-            title="Pinterest Clon"
-            description="Interfaz inspirada en Pinterest donde los usuarios pueden ver, guardar y explorar imágenes, con diseño responsivo y disposición tipo “masonry grid”."
-            image="Pinterest.png"
-            link="https://github.com/Stevenjr1028/Proyecto"
-        />
-
-        <ProjectCard
-            title="Portfolio Personal"
-            description="Este mismo portfolio desarrollado con Astro y Tailwind CSS."
-            image="Portfolio.png"
-            link="https://mi-portafolio.com"
-        />
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+      <ProjectCard
+        title="DocTic"
+        description="Aplicación web que permite buscar, subir y editar documentos académicos, facilitando la organización de contenidos educativos mediante una base de datos y funcionalidades CRUD."
+        image="DocTIC.png"
+        link="https://github.com/paulomeister/AplicacionIngSoftFinal"
+        icons={[netxIcon, JavScripIcon, JavaIcon]}
+      />
+  
+      <ProjectCard
+        title="Pinterest Clon"
+        description="Interfaz inspirada en Pinterest donde los usuarios pueden ver, guardar y explorar imágenes, con diseño responsivo y disposición tipo “masonry grid”."
+        image="Pinterest.png"
+        link="https://github.com/Stevenjr1028/Proyecto"
+        icons={[tailwindIcon, JavScripIcon]}
+      />
+  
+      <ProjectCard
+        title="Portfolio Personal"
+        description="Este mismo portfolio desarrollado con Astro y Tailwind CSS."
+        image="Portfolio.png"
+        link="https://github.com/Stevenjr2810/Portfolio-Gerson"
+        icons={[tailwindIcon, astroIcon]}
+      />
     </div>
-</section>
+  </section>
+  
