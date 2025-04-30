@@ -1,0 +1,116 @@
+---
+import ContacIcon from "../components/icons/contac.astro";
+import LinkedIcon from "./icons/linkedin.astro";
+import InstagrIcon from "./icons/instagram.astro";
+import GithubIcon from "./icons/github.astro";
+---
+
+<h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-2">
+    <ContacIcon class="w-6 h-6 text-white" />
+    Contacto
+</h2>
+
+<div
+    class="grid md:grid-cols-2 gap-10 items-start bg-transparent p-6 rounded-lg max-w-6xl mx-auto"
+>
+    <!-- Columna izquierda -->
+    <div class="space-y-4 text-white">
+        <h2 class="text-3xl font-bold">
+            <span class="text-pink-500">¿Tienes un proyecto</span> que discutir?
+        </h2>
+        <p class="text-lg">¡Hablemos!</p>
+
+        <div>
+            <h3 class="text-sm font-semibold text-gray-400 mb-1">CONTACTO</h3>
+            <a
+                href="mailto:tuemail@ejemplo.com"
+                class="text-blue-400 hover:underline">geresloso2000@gmail.com</a
+            >
+        </div>
+
+        <div>
+            <h3 class="text-sm font-semibold text-gray-400 mb-1">
+                REDES SOCIALES
+            </h3>
+            <div class="flex gap-4">
+                <a
+                    href="https://www.linkedin.com/in/gerson-lopez-solis/"
+                    target="_blank"
+                    class="p-2 bg-white/10 rounded-full hover:bg-pink-500 transition"
+                >
+                    <LinkedIcon class="w-5 h-5 text-white" />
+                </a>
+                <a
+                    href="https://github.com/Stevenjr2810"
+                    target="_blank"
+                    class="p-2 bg-white/10 rounded-full hover:bg-pink-500 transition"
+                >
+                    <GithubIcon class="w-5 h-5 text-white" />
+                </a>
+                <a
+                    href="https://www.instagram.com/ger_jr__00?igsh=OXU4Mndua3ZiNnB0&utm_source=qr"
+                    target="_blank"
+                    class="p-2 bg-white/10 rounded-full hover:bg-pink-600 transition"
+                >
+                    <InstagrIcon class="w-5 h-5 text-white" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario -->
+    <form
+        action="https://formsubmit.co/lioo.lm10@gmail.com"
+        method="POST"
+        class="space-y-4 w-full"
+    >
+        <div>
+            <label for="name" class="block mb-2 text-sm font-medium text-white"
+                >Nombre</label
+            >
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="bg-gray-800 border border-gray-600 text-white text-sm rounded-xl block w-full p-3 focus:ring-pink-500 focus:border-pink-500"
+                placeholder="Tu nombre completo"
+            />
+        </div>
+
+        <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-white"
+                >Correo</label
+            >
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="bg-gray-800 border border-gray-600 text-white text-sm rounded-xl block w-full p-3 focus:ring-pink-500 focus:border-pink-500"
+                placeholder="correo@ejemplo.com"
+            />
+        </div>
+
+        <div>
+            <label
+                for="message"
+                class="block mb-2 text-sm font-medium text-white">Mensaje</label
+            >
+            <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                class="bg-gray-800 border border-gray-600 text-white text-sm rounded-xl block w-full p-3 focus:ring-pink-500 focus:border-pink-500"
+                placeholder="Escribe tu mensaje..."></textarea>
+        </div>
+
+        <button
+            type="submit"
+            class="w-full sm:w-auto px-6 py-2.5 rounded-full text-white font-semibold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 hover:opacity-90 shadow-lg transition"
+        >
+            Enviar
+        </button>
+    </form>
+</div>
